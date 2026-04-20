@@ -40,6 +40,7 @@
     };
   </script>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="chatbot.css" />
 </head>
 <body class="font-sans text-brand-ink antialiased overflow-x-hidden">
 
@@ -535,7 +536,7 @@
   <!-- ============ FLOATING WHATSAPP ============ -->
   <a href="https://wa.me/2250748222275?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20formations%20Office%20365"
      target="_blank" rel="noopener" aria-label="Contactez-nous sur WhatsApp"
-     class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 group flex items-center gap-2 sm:gap-3 bg-[#25D366] hover:bg-[#1EBE57] text-white rounded-full shadow-2xl p-3 sm:pl-4 sm:pr-5 sm:py-3 transition-all hover:scale-105">
+     class="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40 group flex items-center gap-2 sm:gap-3 bg-[#25D366] hover:bg-[#1EBE57] text-white rounded-full shadow-2xl p-3 sm:pl-4 sm:pr-5 sm:py-3 transition-all hover:scale-105">
     <span class="relative flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center">
       <span class="absolute inline-flex h-full w-full rounded-full bg-white/40 animate-ping"></span>
       <i data-lucide="message-circle" class="relative h-5 w-5 sm:h-6 sm:w-6"></i>
@@ -546,5 +547,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
+  <!-- Chatbot (widget flottant - voir chatbot.js pour configurer la clé API) -->
+  <script src="chatbot.js"></script>
 </body>
 </html>

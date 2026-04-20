@@ -1,3 +1,6 @@
+# Fichier local contenant la clé API — ne jamais pousser
+chatbot.config.js
+
 node_modules/
 .DS_Store
 Thumbs.db

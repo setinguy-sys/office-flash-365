@@ -16,9 +16,10 @@
   // ⚙️  CONFIGURATION — PERSONNALISE ICI
   // =====================================================================
   const CONFIG = {
-    // 🔑 Clé API OpenRouter (à remplacer par la tienne)
-    //    https://openrouter.ai/keys
-    API_KEY: 'VOTRE_CLE_ICI',
+    // 🔑 Clé API OpenRouter — NE JAMAIS écrire en dur ici.
+    //    Elle est chargée depuis chatbot.config.js (fichier local, gitignoré).
+    //    Fallback : 'VOTRE_CLE_ICI' si le fichier de config n'est pas trouvé.
+    API_KEY: window.OFB_API_KEY || 'VOTRE_CLE_ICI',
 
     // 🤖 Modèle IA (voir https://openrouter.ai/models)
     //    Exemples gratuits : 'meta-llama/llama-3.1-8b-instruct:free',

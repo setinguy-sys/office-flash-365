@@ -1,0 +1,34 @@
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Header scrolled state */
+header.scrolled nav {
+  box-shadow: 0 8px 30px -10px rgba(11, 42, 74, 0.25);
+}
+
+/* Focus */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #F97316;
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Smoother iframe */
+iframe { border: 0; }

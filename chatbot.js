@@ -26,7 +26,7 @@
     //    'mistralai/mistral-7b-instruct:free', 'google/gemma-2-9b-it:free'
     //    Modèles payants plus puissants : 'openai/gpt-4o-mini',
     //    'anthropic/claude-3.5-sonnet', 'openai/gpt-4o'
-    MODEL: 'meta-llama/llama-3.1-8b-instruct:free',
+    MODEL: 'nvidia/nemotron-3-super-120b-a12b:free',
 
     // 💬 Identité du bot (affichée dans le header)
     BOT_NAME: 'Assistant Office-flash 365',

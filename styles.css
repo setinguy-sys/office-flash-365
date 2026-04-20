@@ -32,3 +32,122 @@ a:focus-visible, button:focus-visible {
 
 /* Smoother iframe */
 iframe { border: 0; }
+
+/* ============ REVEAL ON SCROLL ============ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+[data-reveal="left"]  { transform: translateX(-40px); }
+[data-reveal="right"] { transform: translateX(40px); }
+[data-reveal="zoom"]  { transform: scale(0.92); }
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+[data-reveal][data-delay="100"].is-visible { transition-delay: .1s; }
+[data-reveal][data-delay="200"].is-visible { transition-delay: .2s; }
+[data-reveal][data-delay="300"].is-visible { transition-delay: .3s; }
+[data-reveal][data-delay="400"].is-visible { transition-delay: .4s; }
+[data-reveal][data-delay="500"].is-visible { transition-delay: .5s; }
+
+/* ============ SHIMMER / SHINE BUTTONS ============ */
+.shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.9s ease;
+  pointer-events: none;
+}
+.shine:hover::after { transform: translateX(120%); }
+
+/* ============ GRADIENT TEXT ANIMATION ============ */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.text-gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+/* ============ SUBTLE BLOB PULSE ============ */
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(30px, -20px) scale(1.08); }
+  66%      { transform: translate(-20px, 25px) scale(0.95); }
+}
+.animate-blob { animation: blob 14s ease-in-out infinite; }
+
+/* ============ CARD HOVER TILT/GLOW ============ */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -20px rgba(11, 42, 74, 0.25);
+}
+
+/* ============ UNDERLINE LINKS (nav) ============ */
+nav ul a {
+  position: relative;
+}
+nav ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #F97316, #22C55E);
+  transition: width 0.3s ease;
+}
+nav ul a:hover::after { width: 100%; }
+
+/* ============ FLOATING APP CARDS – softer on hover ============ */
+.animate-float { transition: transform 0.3s ease; }
+.animate-float:hover {
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* ============ PULSE RING (live dot) ============ */
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+  70%  { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+.pulse-ring { animation: pulseRing 2s infinite; }
+
+/* ============ MARQUEE (logos) ============ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+/* ============ REDUCE MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}

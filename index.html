@@ -93,18 +93,18 @@
   <section id="accueil" class="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-brand-blue via-brand-blue2 to-[#0d3a6b] text-white">
     <!-- decorative grid -->
     <div class="absolute inset-0 bg-grid-fade [background-size:24px_24px] opacity-40"></div>
-    <div class="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-brand-orange/20 blur-3xl"></div>
-    <div class="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-brand-green/20 blur-3xl"></div>
+    <div class="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-brand-orange/20 blur-3xl animate-blob"></div>
+    <div class="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-brand-green/20 blur-3xl animate-blob" style="animation-delay:-5s"></div>
 
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
       <!-- Copy -->
       <div class="animate-fade-up">
         <span class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 backdrop-blur px-4 py-1.5 text-xs sm:text-sm font-medium">
-          <span class="h-2 w-2 rounded-full bg-brand-green animate-pulse"></span>
+          <span class="h-2 w-2 rounded-full bg-brand-green pulse-ring"></span>
           Expert certifié Microsoft 365 • Côte d'Ivoire
         </span>
         <h1 class="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-          Maîtrisez la puissance d'<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-300">Office 365</span>
+          Maîtrisez la puissance d'<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-300 to-brand-orange text-gradient-animated">Office 365</span>
           pour booster votre carrière à <span class="underline decoration-brand-green decoration-4 underline-offset-4">Abidjan</span>.
         </h1>
         <p class="mt-6 text-lg text-slate-200 max-w-xl">
@@ -112,7 +112,7 @@
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orange2 px-6 py-4 font-semibold shadow-glow hover:scale-[1.02] transition">
+          <a href="#contact" class="shine inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orange2 px-6 py-4 font-semibold shadow-glow hover:scale-[1.02] transition">
             <i data-lucide="rocket" class="h-5 w-5"></i>
             S'inscrire à une session
           </a>
@@ -125,22 +125,22 @@
         <!-- Stats -->
         <div class="mt-10 grid grid-cols-3 gap-4 max-w-lg">
           <div>
-            <div class="text-3xl font-display font-extrabold">+500</div>
+            <div class="text-3xl font-display font-extrabold" data-counter="500" data-prefix="+">+0</div>
             <div class="text-xs sm:text-sm text-slate-300">Apprenants formés</div>
           </div>
           <div>
-            <div class="text-3xl font-display font-extrabold">+30</div>
+            <div class="text-3xl font-display font-extrabold" data-counter="30" data-prefix="+">+0</div>
             <div class="text-xs sm:text-sm text-slate-300">Entreprises</div>
           </div>
           <div>
-            <div class="text-3xl font-display font-extrabold">8 ans</div>
+            <div class="text-3xl font-display font-extrabold" data-counter="8" data-suffix=" ans">0 ans</div>
             <div class="text-xs sm:text-sm text-slate-300">D'expertise</div>
           </div>
         </div>
       </div>
 
       <!-- Visual -->
-      <div class="relative animate-fade-up [animation-delay:200ms]">
+      <div class="relative animate-fade-up [animation-delay:200ms]" data-parallax>
         <div class="relative rounded-[28px] overflow-hidden shadow-2xl ring-1 ring-white/10">
           <img
             src="images/formateur.jpg"
@@ -194,10 +194,10 @@
   <!-- ============ TRUST / LOGOS ============ -->
   <section class="py-12 bg-white border-b border-slate-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-sm font-medium tracking-wider uppercase text-slate-500">
+      <p class="text-center text-sm font-medium tracking-wider uppercase text-slate-500" data-reveal="up">
         Ils nous font confiance — cliniques, écoles et administrations du District d'Abidjan
       </p>
-      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center" data-reveal="up" data-delay="200">
         <div class="flex items-center justify-center gap-2 text-slate-400 hover:text-brand-blue transition">
           <i data-lucide="hospital" class="h-6 w-6"></i><span class="font-semibold">Clinique Pasteur</span>
         </div>
@@ -223,7 +223,7 @@
   <!-- ============ SERVICES / FORMATIONS ============ -->
   <section id="formations" class="py-20 lg:py-28 bg-slate-50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl mx-auto text-center">
+      <div class="max-w-2xl mx-auto text-center" data-reveal="up">
         <span class="inline-block text-xs font-bold tracking-widest uppercase text-brand-orange">Nos formations</span>
         <h2 class="mt-3 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-blue">
           Des parcours concrets, orientés <span class="text-brand-green">résultats</span>.
@@ -235,7 +235,7 @@
 
       <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         <!-- Excel -->
-        <article class="group relative rounded-2xl bg-white p-8 shadow-card border border-slate-100 hover:-translate-y-1 transition">
+        <article data-reveal="up" data-tilt class="group relative rounded-2xl bg-white p-8 shadow-card border border-slate-100 card-hover">
           <div class="h-14 w-14 rounded-xl bg-[#107C41]/10 text-[#107C41] flex items-center justify-center font-bold text-2xl">X</div>
           <h3 class="mt-5 font-display font-bold text-xl text-brand-blue">Excel Pro</h3>
           <p class="mt-2 text-slate-600">
@@ -252,7 +252,7 @@
         </article>
 
         <!-- Word & PPT -->
-        <article class="group relative rounded-2xl bg-white p-8 shadow-card border border-slate-100 hover:-translate-y-1 transition">
+        <article data-reveal="up" data-delay="200" data-tilt class="group relative rounded-2xl bg-white p-8 shadow-card border border-slate-100 card-hover">
           <div class="flex gap-2">
             <div class="h-14 w-14 rounded-xl bg-[#2B579A]/10 text-[#2B579A] flex items-center justify-center font-bold text-2xl">W</div>
             <div class="h-14 w-14 rounded-xl bg-[#B7472A]/10 text-[#B7472A] flex items-center justify-center font-bold text-2xl">P</div>
@@ -272,7 +272,7 @@
         </article>
 
         <!-- Cloud -->
-        <article class="group relative rounded-2xl bg-gradient-to-br from-brand-blue to-brand-blue2 text-white p-8 shadow-card hover:-translate-y-1 transition">
+        <article data-reveal="up" data-delay="400" data-tilt class="group relative rounded-2xl bg-gradient-to-br from-brand-blue to-brand-blue2 text-white p-8 shadow-card card-hover">
           <div class="h-14 w-14 rounded-xl bg-white/15 flex items-center justify-center">
             <i data-lucide="cloud" class="h-7 w-7 text-white"></i>
           </div>
@@ -297,7 +297,7 @@
   <!-- ============ SERVICES COACHING ============ -->
   <section id="services" class="py-20 lg:py-28 bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
-      <div class="order-2 lg:order-1">
+      <div class="order-2 lg:order-1" data-reveal="left">
         <span class="inline-block text-xs font-bold tracking-widest uppercase text-brand-green">Coaching sur mesure</span>
         <h2 class="mt-3 font-display font-extrabold text-3xl sm:text-4xl text-brand-blue">
           Un accompagnement personnalisé, chez vous ou en entreprise.
@@ -336,13 +336,13 @@
           </div>
         </div>
 
-        <a href="#contact" class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orange2 text-white px-6 py-3.5 font-semibold shadow-glow hover:scale-[1.02] transition">
+        <a href="#contact" class="shine mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orange2 text-white px-6 py-3.5 font-semibold shadow-glow hover:scale-[1.02] transition">
           S'inscrire à une session <i data-lucide="arrow-right" class="h-4 w-4"></i>
         </a>
       </div>
 
       <!-- Map / localisation -->
-      <div class="order-1 lg:order-2 relative">
+      <div class="order-1 lg:order-2 relative" data-reveal="right">
         <div class="relative rounded-2xl overflow-hidden shadow-card border border-slate-100 bg-gradient-to-br from-brand-blue to-brand-blue2 p-1">
           <div class="rounded-[14px] bg-white p-6 sm:p-8">
             <div class="flex items-center gap-3">
@@ -392,7 +392,7 @@
   <section id="apropos" class="py-20 lg:py-28 bg-slate-50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-1">
+        <div class="lg:col-span-1" data-reveal="left">
           <span class="inline-block text-xs font-bold tracking-widest uppercase text-brand-orange">Pourquoi nous</span>
           <h2 class="mt-3 font-display font-extrabold text-3xl sm:text-4xl text-brand-blue">
             L'expertise <span class="text-brand-green">Microsoft 365</span> au service de la Côte d'Ivoire.
@@ -402,22 +402,22 @@
           </p>
         </div>
         <div class="lg:col-span-2 grid sm:grid-cols-2 gap-5">
-          <div class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card">
+          <div data-reveal="up" class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card card-hover">
             <i data-lucide="trending-up" class="h-7 w-7 text-brand-green2"></i>
             <h4 class="mt-3 font-display font-bold text-brand-blue">Montée rapide en compétence</h4>
             <p class="mt-1 text-sm text-slate-600">Méthode "flash" : l'essentiel en un temps record.</p>
           </div>
-          <div class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card">
+          <div data-reveal="up" data-delay="100" class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card card-hover">
             <i data-lucide="award" class="h-7 w-7 text-brand-orange"></i>
             <h4 class="mt-3 font-display font-bold text-brand-blue">Formateur certifié</h4>
             <p class="mt-1 text-sm text-slate-600">Expertise confirmée sur toute la suite Microsoft 365.</p>
           </div>
-          <div class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card">
+          <div data-reveal="up" data-delay="200" class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card card-hover">
             <i data-lucide="handshake" class="h-7 w-7 text-brand-blue"></i>
             <h4 class="mt-3 font-display font-bold text-brand-blue">Approche personnalisée</h4>
             <p class="mt-1 text-sm text-slate-600">Programmes adaptés à votre métier et à votre niveau.</p>
           </div>
-          <div class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card">
+          <div data-reveal="up" data-delay="300" class="rounded-2xl bg-white border border-slate-100 p-6 shadow-card card-hover">
             <i data-lucide="headphones" class="h-7 w-7 text-brand-green2"></i>
             <h4 class="mt-3 font-display font-bold text-brand-blue">Suivi post-formation</h4>
             <p class="mt-1 text-sm text-slate-600">Support continu pour ancrer durablement vos acquis.</p>
@@ -433,7 +433,7 @@
     <div class="absolute -top-20 -right-20 h-96 w-96 rounded-full bg-brand-orange/25 blur-3xl"></div>
     <div class="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-brand-green/25 blur-3xl"></div>
 
-    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center" data-reveal="zoom">
       <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight">
         Prêt à transformer votre maîtrise d'<span class="text-brand-orange">Office 365</span> ?
       </h2>
@@ -442,7 +442,7 @@
       </p>
 
       <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-        <a href="tel:+2250748222275" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orange2 px-6 py-4 font-semibold shadow-glow hover:scale-[1.02] transition">
+        <a href="tel:+2250748222275" class="shine inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-orange to-brand-orange2 px-6 py-4 font-semibold shadow-glow hover:scale-[1.02] transition">
           <i data-lucide="phone" class="h-5 w-5"></i>
           Appeler maintenant
         </a>
